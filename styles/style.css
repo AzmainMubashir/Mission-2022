@@ -39,6 +39,10 @@
 }
 
 /* ----------Common styles---------- */
+
+*{
+    margin: 0px;
+}
 .common-btn{
     font-size: 1rem;
     font-weight: 500;
@@ -47,17 +51,19 @@
     font-style: normal;
     background-color: rgb(255, 89, 89);
     border: none;
-    padding: 12px 26px;
+    padding: 12px 24px;
     border-radius: 5px;
 }
 .common-text-b{
     color: rgb(62, 62, 62);
     font-size: 1.125rem;
+    margin: 18px 0px;
 }
 
 .common-text-s{
     color: rgb(66, 66, 66);
     font-size: 1rem;
+    margin: 18px 0px;
 }
 
 /* ----------header section--------- */
@@ -66,7 +72,7 @@ header{
 display: flex;
 justify-content: space-between;
 align-items: center;
-margin: 40px 80px;
+margin: 40px 100px;
 }
 header div{
     width: 550px;
@@ -79,24 +85,173 @@ header div{
 .header-tittle span,span{
     color: rgb(255, 173, 90);
 }
+
 header img{
     width: 425px;
+    float: right;
 }
 
 /* ----------Sec-1 styles---------- */
-.sec-1{
+.sec-1,
+.sec-2,
+.sec-3{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 60px 100px;
 }
 .sec-1-tittle{
     color: rgb(19, 16, 58);
     font-size: 3rem;
     font-weight: 700;
+    margin-bottom: 60px;
+    text-align: center;
+}
+ .sec-1-card-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .card{
+    width: 320px;
+    height: 370px;
+    border-radius: 25px;
+    margin-right: 20px;
+ }
+ .card div{
+    padding: 30px;
+ }
+ .box-1{
+    background-color: rgba(79, 157, 166, 0.1);
+}
+.box-2{
+    background-color: rgba(255, 89, 89, 0.1);
+}
+.box-3{
+    background-color: rgb(255, 244, 214);
+}
+ .card img{
+    width: 120px;
+ }
+ .card h4{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 12px;
+    margin-bottom: 16px;
 }
 
+/* ----------Sec-2 styles---------- */
 
+.slide-1,
+.slide-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+}
+.slide-1 div,
+.slide-2 div{
+    margin-right: 80px;
+}
+.slide-text-box{
+    width: 500px;
+}
+.slide-img-1,
+.slide-img-2
+{
+    width: 350px;
+    height: 350px;
+}
+.slide-ring-1{
+    position: absolute;
+    z-index: -1;
+    width: 200px;
+    top: 1300px;
+    left: 50px;
+}
+.slide-ring-2{
+    position: absolute;
+    z-index: -1;
+    width: 180px;
+    top: 1910px;
+    right: 150px;
+}
+.sec-2 h2{
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+/* ----------Sec-3 styles---------- */
+
+.sec-3-tittle{
+    color: rgb(0, 0, 0);
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 50px 0px;
+    /* text-align: center; */
+}
+.slide-app{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0px;
+}
+.app-text-box{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.app-img{
+    width: 230px;
+    height: 460px;
+    margin-right: 250px;
+}
+.c1{
+    position: absolute;
+    z-index: -1;
+    width: 145px;
+    top: 2275px;
+    left: 120px;
+}
+.c2{    
+    position: absolute;
+    z-index: -1;
+    width: 75px;
+    top: 2500px;
+    left: 325px;
+}
+.c3{
+    position: absolute;
+    z-index: -1;
+    width: 75px;
+    top: 2700px;
+    left: 150px;
+}
+
+/* ----------Footer styles---------- */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(11, 13, 23);;
+}
+footer h3{
+    color: white;
+    font-size: 2.25rem;
+    margin: 30px 0px;
+}
+footer p{
+    color: rgb(217, 219, 225);
+    font-size: 0.875rem;
+    font-weight: 200;
+    margin-bottom: 40px;
+}
+footer span{
+    color: rgb(255, 89, 89);
+}
 /* Responsive styles */
 
 @media screen and (max-width:576px) {
@@ -112,4 +267,46 @@ header img{
     header img{
         width: 300px;
     }
+    .sec-1-card-box{
+        flex-direction: column;
+    }
+    .slide-1{
+        flex-direction: column;
+    }
+    .slide-2{
+        flex-direction: column-reverse;
+    }
+    .slide-app{
+        flex-direction: column;
+    }
+    .app-img{
+        margin-right: 0px;
+    }
+    .slide-text-box{
+        width: 300px;
+    }
+    .app-text-box{
+        width: 300px;
+    }
+    .slide-ring-1,
+    .slide-ring-2,
+    .c1,
+    .c2,
+    .c3{
+        display: none;
+    }
+    .slide-1 div,
+    .slide-2 div{
+    margin-right: 0px;
+}
+.card{
+    margin-right: 0px;
+    margin-top: 20px;
+}
+.sec-1,
+.sec-2,
+.sec-3{
+    margin: 60px 40px;
+}
+
 }
